@@ -1,0 +1,4 @@
+primary: 711DB0 rgb(113, 29, 176)
+secondary: C21292 rgb(194, 18, 146)
+tertiary: EF4040 rgb(239, 64, 64)
+quaternary: FFA732 rgb(255, 167, 50)

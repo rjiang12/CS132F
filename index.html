@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Shoe Store</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>The Shoe Store</h1>
+        <nav>
+            <ul>
+                <li id="nike"><a href="nike.html">Nike</a></li>
+                <li id="adidas">Adidas</li>
+                <!-- FAQ page will be built... eventually... -->
+                <li id="faq">FAQ</li>
+                <!-- ... Same with the contact page... -->
+                <li id="contact">Contact Us</li>
+                <!-- ... and the cart -->
+                <li id="cart">Cart</li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Clicking on the two a tags would scroll through the slideshow -->
+    <div class="slideshow-container">
+        <div class="slides-container">
+            <a class="prev" >&#10094;</a>
+            <div class="slide-container">
+                <img src="imgs/nike_logo.png" alt="nike logo">
+            </div>
+            <div class="slide-container hidden">
+                <img src="imgs/adidas_logo.png" alt="adidas logo">
+            </div>
+            <a class="next">&#10095;</a>
+        </div>
+    </div>
+    <footer>
+        <p>By Roy Jiang</p>
+        <p>CS 132, 2024</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+body, * {
+    font-family: "Oswald", "Helvetica", sans-serif;
+}
+
+body {
+	background: linear-gradient(-45deg, #711DB0, #C21292, #EF4040, #FFA732);
+	animation: gradient 15s ease infinite;
+    height: 100vh;
+    background-size: 120% 120%;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+header, footer { 
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 10px;
+    background-color: rgb(211,211,211, 0.25);
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+nav > ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav > ul > li > a {
+    text-decoration: none;
+    color: black;
+}
+
+nav > ul > li:hover, .prev, .next, .product:hover {
+    cursor: pointer;
+}
+
+.slideshow-container {
+    overflow: hidden;
+}
+
+.slides-container {
+    display: flex;
+    align-items: center;
+}
+
+.slide-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slide-container > img {
+    width: 75%;
+}
+
+.hidden {
+    display: none;
+}
+
+.prev, .next {
+    font-size: x-large;
+}
+
+.products {
+    display: grid;
+    grid-template-rows: repeat(auto-fit, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    width: 100%;
+}
+
+.product {
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 10px;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.product:hover {
+    border: 2px solid; 
+    border-image-slice: 1;
+    border-image-source: linear-gradient(to left, #0099FF, #00D2FF, #4BFCE1);
+}
+
+.product > img {
+    max-width: 100%;
+    height: 50%;
+}
+
+#product-page {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#product-side, #text-side {
+    width: 45%;
+}
+
+#product-side > img {
+    width: 100%;
+}
+
+#text-side {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: first baseline;
+}
+
+#text-side > button {
+    margin: 25px 25px 25px 0;
+    color: black;
+    background: linear-gradient(to left, #0099FF, #00D2FF, #4BFCE1);
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px 10px 20px;
+}
+
+#text-side > button:hover {
+    cursor: pointer;
+    background: linear-gradient(to right, #0099FF, #00D2FF, #4BFCE1);
+}
