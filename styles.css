@@ -6,9 +6,9 @@ body, * {
 
 body {
 	background: linear-gradient(-45deg, #711DB0, #C21292, #EF4040, #FFA732);
-	animation: gradient 15s ease infinite;
+	animation: gradient 5s ease infinite;
     height: 100vh;
-    background-size: 120% 120%;
+    background-size: 200% 200%;
 }
 
 @keyframes gradient {
@@ -16,7 +16,7 @@ body {
 		background-position: 0% 50%;
 	}
 	50% {
-		background-position: 100% 50%;
+		background-position: 50% 50%;
 	}
 }
 
