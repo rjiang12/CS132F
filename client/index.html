@@ -1,0 +1,49 @@
+<!--
+    Author: Roy Jiang
+    CS 132 Spring 2024
+    Date: June 9th, 2024
+
+    This is the index.html page for the shoe store app for the landing homepage.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Shoe Store</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="utils.js"></script>
+    <script defer src="script.js"></script> 
+</head>
+<body>
+    <header>
+        <h1>The Shoe Store</h1>
+        <nav>
+            <ul>
+                <li id="all-stock"><a href="all.html">All</a></li>
+                <li id="nike"><a href="nike.html">Nike</a></li>
+                <li id="adidas"><a href="adidas.html">Adidas</a></li>
+                <li id="sale-stock"><a href="sale.html">Sale</a></li>
+                <li id="faq"><a href="faq.html">FAQ</a></li>
+                <li id="contact"><a href="contact.html">Contact Us</a></li>
+                <li id="cart"><a href="cart.html">Cart</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Clicking on the two a tags would scroll through the slideshow -->
+    <div class="slideshow-container">
+        <div class="slides-container">
+            <div class="slide-container">
+                <img src="imgs/nike_logo.png" alt="nike logo">
+            </div>
+            <div class="slide-container">
+                <img src="imgs/adidas_logo.png" alt="adidas logo">
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>By Roy Jiang</p>
+        <p>CS 132, 2024</p>
+    </footer>
+</body>
+</html>

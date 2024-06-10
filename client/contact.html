@@ -1,0 +1,50 @@
+<!--
+    Author: Roy Jiang
+    CS 132 Spring 2024
+    Date: June 9th, 2024
+
+    This is the contact.html page for the shoe store app for customer inquiries
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="utils.js"></script>
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <header>
+        <h1>The Shoe Store</h1>
+        <nav>
+            <ul>
+                <li id="home"><a href="index.html">Go Home</a></li>
+                <li id="cart"><a href="cart.html">Cart</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div id="error-space"></div>
+    <div id="success-space"></div>
+    <main>
+        <h2>Contact Us</h2>
+        <form id="contact-form">
+            <label for="name">Name (required):</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email (required):</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="message">Message (required):</label>
+            <textarea id="message" name="message" required></textarea>
+            
+            <button type="submit">Submit</button>
+        </form>
+    </main>
+    <footer>
+        <p>By Roy Jiang</p>
+        <p>CS 132, 2024</p>
+    </footer>
+</body>
+</html>

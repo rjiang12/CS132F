@@ -1,0 +1,155 @@
+[
+    {
+        "name": "Nike Blazer Mid",
+        "price": 109.99,
+        "description": "Nike Blazer Mid - classic since the beginning.",
+        "brand": "Nike",
+        "sale": false,
+        "img": "bm77.png",
+        "id": 1
+    },
+    {
+        "name": "Nike Air Force 1",
+        "price": 99.99,
+        "description": "No introduction needed - you already know.",
+        "brand": "Nike",
+        "sale": true, 
+        "img": "af1.png",
+        "id": 2
+    },
+    {
+        "name": "Nike Air Max 17",
+        "price": 99.99,
+        "description": "A classic, reintroduced for the modern era.",
+        "brand": "Nike",
+        "sale": true, 
+        "img": "am17.png",
+        "id": 3
+    },
+    {
+        "name": "Nike Air Max 97",
+        "price": 99.99,
+        "description": "An oldie, found in our storage closets.",
+        "brand": "Nike",
+        "sale": true, 
+        "img": "am97.png",
+        "id": 4
+    },
+    {
+        "name": "Nike Air Max 270",
+        "price": 149.99,
+        "description": "A classic reimagined for the future era.",
+        "brand": "Nike",
+        "sale": false, 
+        "img": "am270.png",
+        "id": 5
+    },
+    {
+        "name": "Nike Dunk",
+        "price": 129.99,
+        "description": "A touch of black-and-white class, perfect for any occasion",
+        "brand": "Nike",
+        "sale": false, 
+        "img": "dunk.png",
+        "id": 6
+    },
+    {
+        "name": "Nike Pegasus 39",
+        "price": 130.00,
+        "description": "The most recognizable running shoe anywhere. No debate.",
+        "brand": "Nike",
+        "sale": false, 
+        "img": "peg39.png",
+        "id": 7
+    },
+    {
+        "name": "Nike Winflow 8",
+        "price": 75.00,
+        "description": "Sleek budget running shoe. Take it anywhere.",
+        "brand": "Nike",
+        "sale": false, 
+        "img": "winflow8.png",
+        "id": 8
+    },
+    {
+        "name": "Adidas Adios Pro 23",
+        "price": 249.99,
+        "description": "Records? Shattered. The best running shoe there is.",
+        "brand": "Adidas",
+        "sale": false, 
+        "img": "ap23.webp",
+        "id": 9
+    },
+    {
+        "name": "Adidas Box Hog 3",
+        "price": 49.99,
+        "description": "It may be old, but it still works.",
+        "brand": "Adidas",
+        "sale": true, 
+        "img": "bh3.png",
+        "id": 10
+    },
+    {
+        "name": "Adidas Box Hog 4",
+        "price": 109.99,
+        "description": "The ultimate boxing shoe. Float like a butterfly, sting like a bee.",
+        "brand": "Adidas",
+        "sale": false, 
+        "img": "bh4.webp",
+        "id": 11
+    },
+    {
+        "name": "Adidas Gazelle",
+        "price": 100.00,
+        "description": "An everyday shoe, for the everyday person.",
+        "brand": "Adidas",
+        "sale": true, 
+        "img": "gazelle.webp",
+        "id": 12
+    },
+    {
+        "name": "Adidas NMD",
+        "price": 29.99,
+        "description": "Dang, this color is UGLY.",
+        "brand": "Adidas",
+        "sale": true, 
+        "img": "nmd.png",
+        "id": 13
+    },
+    {
+        "name": "Adidas Samba",
+        "price": 142.00,
+        "description": "There is so much hype around this shoe and I don't know why.",
+        "brand": "Adidas",
+        "sale": true, 
+        "img": "samba.avif",
+        "id": 14
+    },
+    {
+        "name": "Adidas Superstar",
+        "price": 139.99,
+        "description": "The ultimate everyday shoe. Classy.",
+        "brand": "Adidas",
+        "sale": false, 
+        "img": "superstar.webp",
+        "id": 15
+    },
+    {
+        "name": "Adidas Ultraboost 1.0",
+        "price": 179.99,
+        "description": "Classic silhouette. The ultimate cross between an everyday shoe and a running shoe.",
+        "brand": "Adidas",
+        "sale": false, 
+        "img": "ub1.png",
+        "id": 16
+    },
+    {
+        "name": "Adidas Ultraboost 21",
+        "price": 129.00,
+        "description": "A cross between a running shoe and an everyday shoe, but very heavy on the running part.",
+        "brand": "Adidas",
+        "sale": true, 
+        "img": "ub21.webp",
+        "id": 17
+    }
+]
