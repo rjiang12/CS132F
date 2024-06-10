@@ -1,0 +1,16 @@
+1.	What were the hardest features to implement? How did you approach these problems?
+The hardest feature to implement for me was the carousel originally. It was completely new to me, and not a front-end feature I had done before. Luckily, I successfully implemented one in CP3 with the help of a recent-ish tutorial that utilized flex. This made life so much easier during the final project as I could use the same layout with minimal modifications to get the product I wanted. Cart was also on the difficult side as I kind of forgot how localstorage worked. But after reviewing the slides it was actually quite simple to implement. 
+2.	What resources were most helpful to you (either provided by the course or found online)?
+Slides and the one online guide that helped me figure out how to make a carousel (https://medium.com/@algopoint.ltd/how-to-create-a-slideshow-carousel-using-html-css-js-7ab0561b39b3). 
+3.	Were there features you tried to implement and were unsuccessful? What were they and what part of the implementation stumped you?
+There was one feature I actually just forgot I wanted to implement, and I think it really wouldn’t have been that difficult. It would be on the front page, where I wanted to implement a timed-scrolling of the two image carousel for the two logos. It’s not that difficult, I just forgot and ran out of time. 
+4.	If you had another week to work on this project, what would you add to your store?
+I would definitely implement purchasing and inventory count. It would involve an extra bit of tweaking the data file and some more Javascript to check inventory count. 
+5.	What did you enjoy the most about this project? What was the most rewarding?
+I did appreciate the freedom, and I got to play around with some front-end tricks like animation and gradient that I wanted to practice. Figuring out gradients was especially fun because aesthetically, I love gradients. The carousel was also great because it was super smooth. 
+6.	Was the breakdown and checkpoints throughout the assignment helpful? Would you change how the assignment is broken down/what is due?
+They were helpful. The proposal and checkpoint there helped me build a hefty foundation for the project, so the rest of the time was just building my API and writing my Javascript, which was a lot more involved than I had anticipated. Thankfully, because I had most of my static front-end done, it was well within my time budget. I wouldn’t change much about the breakdown – maybe the proposal should involve more front-end requirements so more involved backends don’t end up causing unfinished projects. 
+7.	If you worked with a partner, how was the experience/workload distribution? Would you recommend this in the future?
+I did not have a partner, and I did not mind not having a partner. It was good to practice front- and back-end. 
+8.	What advice would you give to future students taking the course/implementing the Final Project?
+Start early, and don’t get TOO ambitious. I thought my project wasn’t going to be that involved, but I severely underestimated how hefty my script.js was going to end up being. 
