@@ -40,11 +40,12 @@ header, footer, .product, #text-side > button {
 }
 
 footer, nav > ul, .slides-container, .slide-container, .product, #product-page, #text-side,
-.products, #cart-content {
+.products, #cart-content, #contact-form {
     display: flex;
 }
 
-footer, .slides-container, .slide-container, .product, #product-page {
+footer, .slides-container, .slide-container, .product, #product-page, .products, 
+.slides-container, #cart-content {
     align-items: center;
 }
 
@@ -62,11 +63,12 @@ nav > ul > li > a {
     text-decoration: none;
 }
 
-nav > ul > li > a, #text-side > button {
+nav > ul > li > a, #text-side > button, #contact-form button, #submit-purchase {
     color: black;
 }
 
-nav > ul > li:hover, .prev, .next, .product:hover, #text-side > button:hover {
+nav > ul > li:hover, .prev, .next, .product:hover, #text-side > button:hover, 
+#text-side > button, #contact-form button, #submit-purchase, #remove-button {
     cursor: pointer;
 }
 
@@ -91,7 +93,6 @@ nav > ul > li:hover, .prev, .next, .product:hover, #text-side > button:hover {
 }
 
 .products, .slides-container, #cart-content {
-    align-items: center;
     justify-content: space-between;
     gap: 10px;
     width: 100%;
@@ -104,25 +105,29 @@ nav > ul > li:hover, .prev, .next, .product:hover, #text-side > button:hover {
     scroll-snap-type: x mandatory;
 }
 
-.slide-container {
+.slide-container, .product {
     width: 30%;
-    min-width: 100%;
     scroll-snap-align: center;
+}
+
+.slide-container {
+    min-width: 100%;
+}
+
+.product, .faq-item {
+    border: 2px solid black;
 }
 
 .product {
-    border: 2px solid black;
     font-size: 30px;
     font-weight: 700;
-    border-radius: 10px;
-    padding: 10px;
+    border-radius: 9px;
+    padding: 9px;
     height: 60vh;
-    width: 30%;
     min-width: 30%;
-    scroll-snap-align: center;
 }
 
-.product, #text-side {
+.product, #text-side, #contact-form {
     flex-direction: column;
 }
 
@@ -150,38 +155,43 @@ nav > ul > li:hover, .prev, .next, .product:hover, #text-side > button:hover {
     align-items: first baseline;
 }
 
-#text-side > button {
-    margin: 25px 25px 25px 0;
+#text-side > button, #contact-form button, #submit-purchase {
     background: linear-gradient(to left, #0099FF, #00D2FF, #4BFCE1);
     border: none;
-    padding: 10px 20px 10px 20px;
-    cursor: pointer;
 }
 
-#text-side > button:hover {
+#text-side > button {
+    margin: 25px 25px 25px 0;
+    padding: 10px 20px 10px 20px;
+}
+
+#text-side > button:hover, #contact-form button:hover, #submit-purchase:hover {
     background: linear-gradient(to right, #0099FF, #00D2FF, #4BFCE1);
 }
 
-.error {
+.error, .success {
     display: inline;
-    color: red;
     background-color: black;
+}
+
+.error {
+    color: red;
 }
 
 .success {
-    display: inline;
     color: lightgreen;
-    background-color: black;
+}
+
+.on-sale, .question-title, #contact-form label {
+    font-weight: bold;
 }
 
 .on-sale {
-    font-weight: bold;
     background-color: #FFA732;
 }
 
 .question-title {
     font-size: larger;
-    font-weight: bold;
 }
 
 .question-answer {
@@ -189,29 +199,28 @@ nav > ul > li:hover, .prev, .next, .product:hover, #text-side > button:hover {
 }
 
 .faq-item {
-    border: 2px solid black;
     margin: 10px;
     padding: 0px 25px;
-    background-color: rgb(211,211,211, 0.25);
-    border-radius: 8px;
+    background-color: rgb(211,211,211, 0.2);
+    border-radius: 8.5px;
 }
 
 #contact-form {
-    display: flex;
-    flex-direction: column;
     margin: 20px;
 }
 
 #contact-form label {
     margin-bottom: 0.5rem;
-    font-weight: bold;
+}
+
+#contact-form input, #contact-form textarea, #contact-form button, #submit-purchase {
+    font-size: 1rem;
 }
 
 #contact-form input,
 #contact-form textarea {
     margin-bottom: 1rem;
     padding: 0.5rem;
-    font-size: 1rem;
     border: 1px solid black;
     border-radius: 8px;
 }
@@ -223,18 +232,5 @@ nav > ul > li:hover, .prev, .next, .product:hover, #text-side > button:hover {
 
 #contact-form button, #submit-purchase {
     padding: 0.75rem;
-    font-size: 1rem;
-    background: linear-gradient(to left, #0099FF, #00D2FF, #4BFCE1);
-    color: black;
-    border: none;
     border-radius: 4px;
-    cursor: pointer;
-}
-
-#contact-form button:hover, #submit-purchase:hover {
-    background: linear-gradient(to right, #0099FF, #00D2FF, #4BFCE1);
-}
-
-#remove-button {
-    cursor: pointer;
 }

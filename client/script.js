@@ -282,7 +282,7 @@
             return;
         }
 
-        qs('.cart-items h2').textContent += ` (${cart.length})`;
+        qs('.cart-items h2').textContent = `Your Cart (${cart.length})`;
 
         cart.forEach(product => {
             const productCard = gen('div');
