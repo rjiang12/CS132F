@@ -1,6 +1,8 @@
 # Shoe Store API Documentation
+** Roy Jiang **
 This API is designed to retrieve shoe inventory, retrieve frequently asked questions, and 
 intake customer inquiries. Shared behavior includes 500 errors for server issues with reading and/or writing to the respective data files. 
+In addition, there is a catch-all 404 for unknown endpoints. 
 
 
 ## GET /stock
