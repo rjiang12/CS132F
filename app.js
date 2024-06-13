@@ -59,7 +59,7 @@ app.get('/sale', (req, res) => {
 app.get('/stock', (req, res) => {
     fs.readFile(path.join(__dirname, 'stock.json'), 'utf8', (err, data) => {
         if (err) {
-            res.status(500).send('Error retrieving stock');
+            res.status(500).json({ error: 'Error retrieving stock' });
             return;
         }
         const products = JSON.parse(data);
@@ -68,7 +68,7 @@ app.get('/stock', (req, res) => {
         if (brand) {
             const filteredProducts = products.filter(product => product.brand.toLowerCase() === brand.toLowerCase());
             if(filteredProducts.length == 0) {
-                res.status(404).send('No items for this brand. Please double check brand name.')
+                res.status(404).json({ error: 'No items for this brand. Please double check brand name.' })
             }
             else {
                 res.status(200).json(filteredProducts);
@@ -109,7 +109,7 @@ app.get('/product', (req, res) => {
 app.get('/product/:id', (req, res) => {
     fs.readFile(path.join(__dirname, 'stock.json'), 'utf8', (err, data) => {
         if (err) {
-            res.status(500).send('Error retrieving stock');
+            res.status(500).json({ error: 'Error retrieving stock' });
             return;
         }
         const products = JSON.parse(data);
@@ -117,7 +117,7 @@ app.get('/product/:id', (req, res) => {
         if (product) {
             res.status(200).json(product);
         } else {
-            res.status(404).send('Product not found');
+            res.status(404).json({ error: 'Product not found'} );
         }
     });
 });
@@ -133,7 +133,7 @@ app.get('/product/:id', (req, res) => {
 app.get('/faq-data', (req, res) => {
     fs.readFile(path.join(__dirname, 'faq.json'), 'utf8', (err, data) => {
         if (err) {
-            res.status(500).send('Error retrieving FAQs');
+            res.status(500).json({ error: 'Error retrieving FAQs'});
             return;
         }
         res.status(200).json(JSON.parse(data));
@@ -171,7 +171,7 @@ app.post('/submit-question', (req, res) => {
 
         fs.writeFile(path.join(__dirname, 'questions.json'), JSON.stringify(questions), (err) => {
             if (err) {
-                res.status(500).send('Error writing question');
+                res.status(500).json({ error: 'Error writing question' });
                 return;
             }
             res.status(201).send('Question submitted');
@@ -190,7 +190,7 @@ app.get('/cart', (req, res) => {
  * Catch all 404 not found error for unknown endpoints 
  */
 app.use((req, res) => {
-    res.status(404).send('404 Not Found');
+    res.status(404).json({ error: '404 Not Found' });
 });
 
 app.listen(PORT, () => {
