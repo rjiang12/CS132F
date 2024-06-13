@@ -54,7 +54,7 @@ app.get('/sale', (req, res) => {
         "img": "bm77.png",
         "id": 1
     }]
- * Returns 500 error if server cannot read data. 
+ * Returns a 404 error if no items were found for a brand.
  */
 app.get('/stock', (req, res) => {
     fs.readFile(path.join(__dirname, 'stock.json'), 'utf8', (err, data) => {
@@ -86,7 +86,6 @@ app.get('/stock', (req, res) => {
 
 /**
  * Serves product.html page
- * Returns 400 error if fetched without required id parameter
  */
 app.get('/product', (req, res) => {
     res.sendFile(path.join(__dirname, 'client', 'product.html'));
@@ -104,7 +103,7 @@ app.get('/product', (req, res) => {
         "img": "bm77.png",
         "id": 1
     }]
- * Returns 404 error if the product isn't found (ID doesn't match any existing product). 
+ * Returns 404 error if the product isn't found (ID doesn't match any existing product/invalid ID). 
  * Returns 500 error if server cannot read data. 
  */
 app.get('/product/:id', (req, res) => {
@@ -130,7 +129,6 @@ app.get('/product/:id', (req, res) => {
         "question": "What is your return policy?",
         "answer": "We accept returns within 30 days of purchase. Items must be in original condition."
     }]
- * Returns 500 error if server cannot read data. 
  */
 app.get('/faq-data', (req, res) => {
     fs.readFile(path.join(__dirname, 'faq.json'), 'utf8', (err, data) => {

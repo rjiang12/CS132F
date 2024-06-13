@@ -105,7 +105,7 @@ fetch('/product/15')
 ```
 
 **Error Handling:**
-* 404 Not Found Error - ID does not correspond to an existing item
+* 404 Not Found Error - ID does not correspond to an existing item/invalid ID.
 ```json
 {
     "error": "Product not found"
