@@ -18,7 +18,7 @@ Returns all stock as a JSON array matching any query parameters given like brand
 **Supported Parameters**
 Query parameters: 
 - `brand` (optional): Filters products by brand.
-- `sale` (optional): Filters products on sale.
+- `sale` (optional): Filters products on sale. Must be boolean. 
 
 **Example Request:** 
 ```javascript
@@ -54,10 +54,19 @@ fetch('/stock?brand=nike')
 ```
 
 **Error Handling:**
-* 500 Internal Server Error - server unable to read the data file. 
+* 404 Not Found Error - if no items are found for a brand or if the brand name is not recognized. 
+```javascript
+fetch('/stock?brand=bonk')
+```
 ```json
 {
-    "error": "Error reading stock data"
+    "error": "No items for this brand. Please double check brand name."
+}
+```
+* 500 Internal Server Error - server unable to retrieving information about current stock
+```json
+{
+    "error": "Error retrieving stock"
 }
 ```
 
@@ -96,16 +105,16 @@ fetch('/product/15')
 ```
 
 **Error Handling:**
-* 400 Bad Request Error - missing required id parameter 
+* 404 Not Found Error - ID does not correspond to an existing item
 ```json
 {
-    "error": "Missing id field"
+    "error": "Product not found"
 }
 ```
-* 500 Internal Server Error - server unable to read the data file 
+* 500 Internal Server Error - server unable to retrieve information about current stock
 ```json
 {
-    "error": "Error reading stock data"
+    "error": "Error retrieving stock"
 }
 ```
 
@@ -144,10 +153,10 @@ fetch('/faq-data')
 ```
 
 **Error Handling:**
-* 500 Internal Server Error - server unable to read the data file 
+* 500 Internal Server Error - server unable retrieve FAQs
 ```json
 {
-    "error": "Error reading FAQ data"
+    "error": "Error retrieving FAQs"
 }
 ```
 
@@ -196,10 +205,10 @@ Question submitted
     "error": "Missing fields"
 }
 ```
-* 500 Internal Server Error - server unable to read or write to the data file 
+* 500 Internal Server Error - server unable to read or write question(s)
 ```json
 {
-    "error": "Failed to read questions"
+    "error": "Error retrieving questions"
 }
 {
     "error": "Error writing question"

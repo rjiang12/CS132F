@@ -59,23 +59,27 @@ app.get('/sale', (req, res) => {
 app.get('/stock', (req, res) => {
     fs.readFile(path.join(__dirname, 'stock.json'), 'utf8', (err, data) => {
         if (err) {
-            res.status(500).send('Error reading stock data');
+            res.status(500).send('Error retrieving stock');
             return;
         }
-        res.status(200);
         const products = JSON.parse(data);
         const brand = req.query.brand;
         const sale = req.query.sale;
         if (brand) {
             const filteredProducts = products.filter(product => product.brand.toLowerCase() === brand.toLowerCase());
-            res.json(filteredProducts);
+            if(filteredProducts.length == 0) {
+                res.status(404).send('No items for this brand. Please double check brand name.')
+            }
+            else {
+                res.status(200).json(filteredProducts);
+            }
         } 
         else if (sale) {
             const filteredProducts = products.filter(product => product.sale);
-            res.json(filteredProducts);
+            res.status(200).json(filteredProducts);
         }
         else {
-            res.json(products);
+            res.status(200).json(products);
         }
     });
 });
@@ -85,9 +89,6 @@ app.get('/stock', (req, res) => {
  * Returns 400 error if fetched without required id parameter
  */
 app.get('/product', (req, res) => {
-    if (!req.params || !req.params.id) {
-        res.status(400).json({ error: 'Missing id field' });
-    }
     res.sendFile(path.join(__dirname, 'client', 'product.html'));
 });
 
@@ -109,7 +110,7 @@ app.get('/product', (req, res) => {
 app.get('/product/:id', (req, res) => {
     fs.readFile(path.join(__dirname, 'stock.json'), 'utf8', (err, data) => {
         if (err) {
-            res.status(500).send('Error reading stock data');
+            res.status(500).send('Error retrieving stock');
             return;
         }
         const products = JSON.parse(data);
@@ -134,7 +135,7 @@ app.get('/product/:id', (req, res) => {
 app.get('/faq-data', (req, res) => {
     fs.readFile(path.join(__dirname, 'faq.json'), 'utf8', (err, data) => {
         if (err) {
-            res.status(500).send('Error reading FAQ data');
+            res.status(500).send('Error retrieving FAQs');
             return;
         }
         res.status(200).json(JSON.parse(data));
@@ -163,7 +164,7 @@ app.post('/submit-question', (req, res) => {
 
     fs.readFile(path.join(__dirname, 'questions.json'), 'utf8', (err, data) => {
         if(err) {
-            res.status(500).json({ error: 'Failed to read questions' });
+            res.status(500).json({ error: 'Error retrieving questions' });
             return;
         }
 
